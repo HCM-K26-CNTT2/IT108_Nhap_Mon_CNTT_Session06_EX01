@@ -1,0 +1,8 @@
+﻿Bài 2 : Phân tích Lỗi 404 từ File Log Máy chủ 
+Phần 1: phân tích
+* Get-ChildItem: tìm vị trí tệp, khi An gõ Get-ChildItem -Filter “*404*” là tìm thư mục có tên 404. Vì không có tệp nào là 404 nên sẽ ra kết quả là rổng.
+* select-string: tìm chuỗi chữ,văn bản
+
+
+Phần 2: sửa lỗi
+* select-string “ERROR” access.log
