@@ -1,0 +1,13 @@
+﻿Bài 1 : Kiểm tra File Log Máy chủ Dung Lượng Lớn 
+Phần 1: phân tích 
+* Lệnh cat của Nam  hiển thị nhiều dữ liệu vì: lệnh này sẽ đọc và in toàn bộ 500MB dữ liệu ra terminal cùng một lúc mà không dừng hay phân trang, khiến Terminal bị quá tải dữ liệu và bị treo.
+* Không nên mở file 500MB bằng Notepad vì: ứng dụng sẽ cố nạp toàn bộ tệp vào RAM, khiến máy tính bị giật lag hoặc hiển thị thông báo “Not responding”
+
+
+Phần 2: hoàn thiện
+* Đưa ra lệnh PowerShell để xem toàn bô file theo từng trang (từng màn hình một)
+* Get-Content server_log_500MB.log | more
+
+
+* Đưa ra lệnh PowerShell chỉ xem 10 dòng cuối cùng để tìm lỗi
+* Get-Content server_log_500MB.log -Tail 10
